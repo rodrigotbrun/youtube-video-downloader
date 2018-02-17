@@ -1,0 +1,154 @@
+<div class="video-info left card text-white bg-dark">
+    <div class="card-img-top">
+        <a href="https://www.youtube-nocookie.com/embed/{{ id }}?rel=0&amp;controls=0&amp;showinfo=0"
+           target="_blank">
+            <img class="card-img-top" src="{{ thumbnail }}" alt="Card image cap">
+        </a>
+    </div>
+
+    <div class="card-body">
+        <span class="card-text">
+            <p>
+                <b>
+                    {{ video.title }}
+                    <div class="badge badge-danger" style="text-transform: uppercase;">
+                        {{ contentDetails.definition }}
+                    </div>
+                </b>
+            </p>
+
+            <div class="text-muted">
+                <div class="row">
+                    <div class="col-sm-6">
+                         <p>
+                            <i class="fa fa-fw fa-clock-o"></i> {{ duration.H }}:{{ duration.M }}:{{ duration.S }}
+
+                            <br>
+
+                            <i class="fa fa-fw fa-user"></i>
+                            <a href="https://www.youtube.com/channel/{{ video.channelId }}" target="_blank"
+                               class="text-danger">
+                                {{ video.channelTitle }}
+                            </a>
+                            <br>
+
+                            <i class="fa fa-fw fa-eye"></i> {{ statistics.views }}
+                            <br>
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                         <p>
+                            <i class="fa fa-fw fa-thumbs-up"></i> {{ statistics.likes }}
+                            <br>
+                            <i class="fa fa-fw fa-thumbs-down"></i> {{ statistics.disLikes }}
+                         </p>
+                    </div>
+                </div>
+
+            </div>
+        </span>
+    </div>
+</div>
+
+<div class="video-info right text-white">
+
+    <div class="work-in-progress">
+
+        <div class="badge badge-info">
+            WORK IN PROGRESS
+        </div>
+
+        <div class="separator">
+            <hr>
+            <div class="section">
+                <span>Preferências de formatação</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3 text-right">
+                Preset de vídeo/audio:
+            </div>
+            <div class="col-sm-9">
+                <select class="video-format" style="width: 100%;">
+                    <optgroup label="Padrão">
+                        <option value="mp4">mp4</option>
+                        <option value="webm">webm</option>
+                        <option value="3gp">3gp</option>
+                    </optgroup>
+                    <optgroup label="Personalizados" class="video-advanced-presets">
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="separator">
+            <hr>
+            <div class="section">
+                <span>Legendas</span>
+            </div>
+        </div>
+
+        <div class="form-check">
+            <label class="form-check-label text-muted">
+                <input class="form-check-input add-subtitle-file" type="radio" name="withsub" value="no-sub" checked>
+                Não baixar legenda
+            </label>
+        </div>
+
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input add-subtitle-file" type="radio" name="withsub" value="sub">
+                Baixar arquivo de legenda no formato caso disponível (srt)
+            </label>
+        </div>
+
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input add-automatic-subtitle" type="radio" name="withsub" value="sub-auto">
+                Baixar arquivo de legenda gerado automaticamente pelo Youtube. (vtt)
+            </label>
+        </div>
+
+        <div class="row sub-lang card-s">
+            <div class="col-sm-3 form-check offset-2">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="sublang[]" value="pt" checked>
+                    Português
+                </label>
+            </div>
+            <div class="col-sm-3 form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="sublang[]" value="en">
+                    English
+                </label>
+            </div>
+            <div class="col-sm-3 form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="sublang[]" value="es">
+                    Español
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <button onclick="downloadVideo('{{ id }}', 'video-as-mp4')"
+            class="btn btn-primary btn-block">
+        Baixar video formato mp4
+    </button>
+
+    <button onclick="downloadVideo('{{ id }}', 'audio-only')"
+            class="btn btn-success btn-block">
+        Baixar somente audio
+    </button>
+
+</div>
+
+<script>
+
+</script>

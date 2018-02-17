@@ -1,0 +1,62 @@
+{
+  "name": "YoutubeVideoDownloader",
+  "version": "1.0.0",
+  "description": "Aplicativo para baixar vídeos do youtube",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron/electron-quick-start.git"
+  },
+  "build": {
+    "asarUnpack": [
+      "**/bin/darwin/*"
+    ],
+    "appId": "br.com.rodrigobrun.ytvd",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
+  },
+  "author": "Rodrigo Brun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/electron/electron-quick-start/issues"
+  },
+  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "dependencies": {
+    "electron-router": "^0.4.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "mustache": "^2.3.0",
+    "youtube-node": "^1.3.2"
+  },
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "electron-builder": "^19.43.0"
+  }
+}

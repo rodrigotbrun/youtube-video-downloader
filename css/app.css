@@ -1,0 +1,290 @@
+body {
+    background: #2a2a2a;
+    color: white;
+}
+
+.navbar-dark {
+    background: #222222 !important;
+    border-bottom: 1px solid #1d1d1d;
+    box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.bg-dark {
+    background-color: #222222 !important;
+}
+
+.container-content {
+    padding: 20px;
+}
+
+.form-control {
+    background: #1a1a1a !important;
+    border: 1px solid #131313;
+    box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #ffffff !important;
+}
+
+.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: #b64444;
+}
+
+.input-group-addon {
+    color: #999999;
+    background: none !important;
+    border: none !important;
+}
+
+.loading-container {
+    display: none;
+    width: 100%;
+    height: 45px;
+    color: rgb(182, 68, 68);
+    font-size: 14px;
+    padding: 20px;
+}
+
+.loading-wheel {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    margin-right: 10px;
+    border: 3px solid rgb(182, 68, 68);
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: cssload-spin 475ms infinite linear;
+    -o-animation: cssload-spin 475ms infinite linear;
+    -ms-animation: cssload-spin 475ms infinite linear;
+    -webkit-animation: cssload-spin 475ms infinite linear;
+    -moz-animation: cssload-spin 475ms infinite linear;
+    float: left;
+}
+
+@keyframes cssload-spin {
+    100% {
+        transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes cssload-spin {
+    100% {
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes cssload-spin {
+    100% {
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes cssload-spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes cssload-spin {
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.status-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #222222;
+    border-top: 1px solid #1d1d1d;
+    padding: 4px;
+    color: #666666;
+    font-size: 11px;
+    text-align: right;
+    z-index: 999;
+    box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.06);
+}
+
+.loading-status-bar {
+    width: 100%;
+    height: 9px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.loading-status-bar-wheel {
+    width: 9px;
+    height: 9px;
+    margin: 0 auto;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: status-bar-spin 500ms infinite linear;
+    -o-animation: status-bar-spin 500ms infinite linear;
+    -ms-animation: status-bar-spin 500ms infinite linear;
+    -webkit-animation: status-bar-spin 500ms infinite linear;
+    -moz-animation: status-bar-spin 500ms infinite linear;
+}
+
+@keyframes status-bar-spin {
+    100% {
+        transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes status-bar-spin {
+    100% {
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes status-bar-spin {
+    100% {
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes status-bar-spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes status-bar-spin {
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.video-info.left {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    width: 400px;
+    bottom: 40px;
+}
+
+.video-info.left .card-img-top {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-info.left .card-img-top img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.video-info.right {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    left: 440px;
+    bottom: 40px;
+    font-size: 13px;
+}
+
+.separator {
+    position: relative;
+    height: 32px;
+}
+
+.separator hr {
+    border-color: #545454;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.separator .section {
+    position: absolute;
+    text-align: center;
+    top: 3px;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.separator .section span {
+    background-color: #2a2a2a;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #545454;
+}
+
+.card-s {
+
+}
+
+.work-in-progress {
+    opacity: 0.37;
+}
+
+.scroll-content {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    overflow: auto;
+}
+
+.scroll-content-padding {
+    padding: 20px;
+    padding-bottom:10px;
+}
+
+.video-result{
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+.video-result .card-img-top {
+    width: 108px;
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    float:left;
+    margin-right:20px;
+}
+
+.video-result .card-img-top img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.video-result .card-text {
+    float:left;
+    width: auto;
+}

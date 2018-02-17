@@ -1,0 +1,25 @@
+<div class="scroll-content">
+    <div class="scroll-content-padding">
+
+        {{#items}}
+        <div class="row video-result" style="padding-bottom:10px;" onclick="goToDownloadPage('{{ id }}')">
+            <div class="col-sm-12">
+                <div class="card bg-dark">
+                    <div class="col-sm-2">
+                        <div class="card-img-top">
+                            <img src="{{ thumbnail }}" />
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="card-text">
+                            {{ video.title }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/items}}
+
+
+    </div>
+</div>
